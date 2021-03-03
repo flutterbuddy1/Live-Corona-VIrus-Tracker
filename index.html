@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Corona Tracker</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+		<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<nav class="nav-wrapper" style="background:#2d3436; display: flex; justify-content: center;align-items: center;">
+			<h5 style="font-size: 30px;">Corona-Tracker</h5>
+		</nav>
+	<div class="container-fluid">
+		      <div class="custom-dropdown">
+				<select id="countries" class="browser-default card">
+					<option value="global">Global</option>
+				</select>
+		</div>
+		<div class="container div_Container">
+		<div class="row m-0">
+		<div class="main_card card bg-dark col-md-12">
+			<div class="card_section" style="display: flex; justify-content: space-between; align-items: center;">
+				<div class="card m-3 text-white" style="width: 180px; padding: 10px; height:100px; background: #0984e3;">
+					<h5>Total Confermed</h5>
+					<h5 id="tc">
+						<div class="spinner-grow text-light" role="status">
+						  <span class="sr-only">Loading...</span>
+						</div>
+					</h5>		
+				</div>
+				<div class="card m-3 text-white" style="width: 180px; padding: 10px; height:100px; background: #d63031;">
+					<h5>Total Deaths</h5>
+					<h5 id="td">
+						<div class="spinner-grow text-light" role="status">
+						  <span class="sr-only">Loading...</span>
+						</div>						
+					</h5>		
+				</div>
+				<div class="card m-3 text-white" style="width: 180px; padding: 10px; height:100px; background: #00b894;">
+					<h5>Total Recovered</h5>
+					<h5 id="tr">
+						<div class="spinner-grow text-light" role="status">
+						  <span class="sr-only">Loading...</span>
+						</div>						
+					</h5>		
+				</div>								
+			</div>
+		</div>
+		<div class="card col-md-4" style=" width: 100%;">
+		<canvas id="myChart"></canvas>
+		</div>
+</div>
+</div>
+
+<!-- Sidebars -->
+<div class="card bg-dark sidebar-right">
+	<div class="navbar bg-dark sticky-top mb-1"  style="border-bottom: 1px solid black; display: flex; justify-content: center; align-items: center;">
+	<h3>Total Recovered</h3>
+	</div>
+	<div class="list" id="list">
+		<div id="loading" class="w-100">
+			<div class="spinner-border text-light" role="status">
+			  <span class="sr-only">Loading...</span>
+			</div>
+		</div>	
+	</div>
+</div>
+
+<div class="card bg-dark sidebar-left">
+	<div class="navbar bg-dark sticky-top mb-1"  style="border-bottom: 1px solid black; display: flex; justify-content: center; align-items: center;">
+	<h3>Total Deaths</h3>
+	</div>
+	<div class="list" id="list1">
+		<div id="loading1" class="w-100">
+			<div class="spinner-border text-light" role="status">
+			  <span class="sr-only">Loading...</span>
+			</div>
+		</div>	
+	</div>
+</div>
+
+
+</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<script src="app.js"></script>
+		<script src="index.js"></script>
+	</body>
+</html>
